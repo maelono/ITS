@@ -18,7 +18,7 @@ import java.util.Map;
 public class entropy {
     public static final String KALGORITHM = "AES";
     public static final String CALGORITHM = KALGORITHM + "/CBC/PKCS5Padding";
-    private static String inFile = "C:\\Users\\nicol\\Documents\\github\\ITS\\Lab2\\itsec-secret-key-crypto\\mystery";
+    private static String inFile = "./itsec-secret-key-crypto/mystery";
     private static String outFile = "./decrypted";
     static byte[] key = new byte[16];
 
