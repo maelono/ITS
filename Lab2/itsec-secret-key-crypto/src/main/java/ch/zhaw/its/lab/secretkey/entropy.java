@@ -93,8 +93,6 @@ public class entropy {
 
     }
     public static double getEntropy(byte[] data) throws IOException {
-
-
         HashMap<Byte, Integer> charCount = new HashMap<>();
         byte [] bytes = data;
          for (byte c : bytes) {
@@ -123,7 +121,6 @@ public class entropy {
         }
     }
     public static void main(String[] args) throws IOException, InvalidAlgorithmParameterException, NoSuchPaddingException, IllegalBlockSizeException, NoSuchAlgorithmException, BadPaddingException, InvalidKeyException {
-
         Path path = Paths.get(inFile);
         byte[] cipherText = Files.readAllBytes(path);
         for (int i=0; i <16; i++) { // Set iv to key
@@ -145,29 +142,19 @@ public class entropy {
         for (byte b : key){
             System.out.printf(b+" ");
         }
-
-
-        /*byte[] textByte = Files.readAllBytes(new File(args[0]).toPath());
-        byte[] keyByte = Files.readAllBytes(new File(args[1]).toPath());
-
-        byte[] decrypted = decrypt(textByte, keyByte);
-
-        if(getEntropy(decrypted)<5.0){
-            System.out.println("true");
-        } else {
-            System.out.println("false");
-        }
         /*
-        args = new String [] {
-
+        inputs = new String [] {
                 "C:\\Users\\nicol\\Documents\\github\\ITS\\Lab2\\itsec-secret-key-crypto\\mystery",
                 "C:\\Users\\nicol\\Documents\\github\\ITS\\Lab2\\itsec-secret-key-crypto\\src\\main\\java\\ch\\zhaw\\its\\lab\\secretkey\\FileEncrypter.java"
         };
+        Path p = Paths.get(inputs[0]);
+        byte[] t = Files.readAllBytes(p);
+        getEntropy(t);
+        Path p2 = Paths.get(inputs[1]);
+        byte[] t2 = Files.readAllBytes(p2);
 
-
-
-        for(String file: args) {
-            System.out.println(getEntropy(file));
-        }*/
+        System.out.println(getEntropy(t));
+        System.out.println(getEntropy(t2));
+         */
     }
 }
